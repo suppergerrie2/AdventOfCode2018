@@ -65,7 +65,7 @@ public class Day2 extends Day {
 				
 				int difference = 0;
 				for(int charIndex = 0; charIndex < lineA.length(); charIndex++) {
-					if(difference>2) break;
+					if(difference>1) break;
 					
 					if(lineA.charAt(charIndex)!=lineB.charAt(charIndex)) {
 						difference++;

@@ -5,11 +5,12 @@ import java.util.List;
 
 public class AdventOfCode {
 
-	static List<Day> days = new ArrayList<Day>();
+	public static List<Day> days = new ArrayList<Day>();
 	
 	public static void main(String[] args) {
 		days.add(new Day1());
 		days.add(new Day2());
+		days.add(new Day3());
 		
 		for(Day day : days) {
 			System.out.println(day.getDayName());
