@@ -7,12 +7,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-//{ 2 3 { 0 3 10 11 12 } { 1 1 { 0 1 99 } 2 } 1 1 2 }
 public class Day8 extends Day {
 
 	@Override
 	public String part1() {
-		Node.HIGHESTINDEX = 0;
 		File file = new File("input/day8.txt");
 
 		List<String> lines;
@@ -38,7 +36,6 @@ public class Day8 extends Day {
 
 	@Override
 	public String part2() {
-		Node.HIGHESTINDEX = 0;
 		File file = new File("input/day8.txt");
 
 		List<String> lines;
@@ -70,16 +67,12 @@ public class Day8 extends Day {
 }
 
 class Node {
-	static int HIGHESTINDEX = 0;
-	
 	final int childrenCount;
 	final int metadataCount;
 
 	final Node[] children;
 	final int[] metadata;
 	
-	final int index;
-
 	public Node(int childrenCount, int metadataCount) {
 		this.childrenCount = childrenCount;
 		this.metadataCount = metadataCount;
@@ -87,7 +80,6 @@ class Node {
 		children = new Node[this.childrenCount];
 		metadata = new int[this.metadataCount];
 		
-		index = HIGHESTINDEX++;
 	}
 
 	public int getTotalMetadata() {
@@ -139,8 +131,4 @@ class Node {
 		return n;
 	}
 
-	@Override
-	public String toString() {
-		return this.index + " " + this.childrenCount + " " + this.metadataCount;
-	}
 }

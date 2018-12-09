@@ -8,14 +8,15 @@ public class AdventOfCode {
 	public static List<Day> days = new ArrayList<Day>();
 
 	public static void main(String[] args) {
-		days.add(new Day1());
-		days.add(new Day2());
-		days.add(new Day3());
-		days.add(new Day4());
-		days.add(new Day5());
-		days.add(new Day6());
-		days.add(new Day7());
-		days.add(new Day8());
+//		days.add(new Day1());
+//		days.add(new Day2());
+//		days.add(new Day3());
+//		days.add(new Day4());
+//		days.add(new Day5());
+//		days.add(new Day6());
+//		days.add(new Day7());
+//		days.add(new Day8());
+		days.add(new Day9());
 		
 		for(Day day : days) {
 			System.out.println(day.getDayName());
